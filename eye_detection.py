@@ -1,11 +1,11 @@
 import cv2
 import mediapipe as mp
 
-# MediaPipe Face Mesh
+
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(refine_landmarks=True)
 
-# Start webcam
+
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 while True:
@@ -24,7 +24,7 @@ while True:
         for face_landmarks in results.multi_face_landmarks:
             h, w, _ = frame.shape
 
-            # Draw eye points
+            
             for landmark in face_landmarks.landmark:
                 x = int(landmark.x * w)
                 y = int(landmark.y * h)
