@@ -11,7 +11,6 @@ while True:
 
     cv2.imshow("Camera Test", frame)
 
-    # Press Q to quit
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
